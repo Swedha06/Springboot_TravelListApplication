@@ -20,7 +20,7 @@ public interface repository extends JpaRepository<travel,Integer>{
 	
 	@Modifying
 	@Transactional
-	@Query(value="Update travel s set s.travelId=?1 , s.name=?2 , s.description=?3 where s.travelId=?5", nativeQuery=true)
+	@Query(value="Update travel s set s.travelId=?1 , s.name=?2 , s.description=?3 where s.travelId=?4", nativeQuery=true)
 	void update(int travelId, String name, String description, int id);
 	
 	
